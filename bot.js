@@ -21,15 +21,31 @@ bot.on('guildMemberAdd',member => {
     message.channel.send(`Hello ${message.author} Welcome to OSDC discord Server..Please introduce yourself!!`)
 })
 
+//help command
+
 bot.on('message',message => {
         if(message.content === '!help')
         {
-            message.channel.send
+            const commandEmbedded = new Discord.MessageEmbed()
+            .setTitle('Here are the list of following commands ')
+            .addFields(
+                {name : '!help', value: "To view the list of commands " ,inline:false},
+                {name : '!website', value: "Visit our Website" ,inline:false},
+                {name : '!facebook', value: "Follow us on Facebook " ,inline:false},
+                {name : '!twitter', value: "Follow us on Twitter " ,inline:false},
+                {name : '!github', value: "Visit our Github repo " ,inline:false},
+                {name : '!telegram', value: "Join our telegram channel " ,inline:false},
+                {name : '!xkcd', value: "To get a Comic " ,inline:false},
+                {name : '!instagram', value: "Follow us on instagram :) " ,inline:false},
+
+            )
+            message.channel.send(commandEmbedded)
         }
 })
 
+//xkcd comic command
+
 bot.on('message',message => {
-   
 if(message.content === '!xkcd')
 { 
     let comicNo = Math.floor(Math.random() * (2000 - 100 + 1) + 100)
@@ -55,7 +71,8 @@ if(message.content === '!xkcd')
     
 }
 })
-//General Bot commands
+
+//Social media commands
 
 bot.on('message',message => { 
    if(message.content === '!website')
