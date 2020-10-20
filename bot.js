@@ -27,15 +27,17 @@ bot.on('message',message => {
         if(message.content === '!help')
         {
             const commandEmbedded = new Discord.MessageEmbed()
-            .setTitle('Here are the list of following commands ')
+            .setTitle('Here are the list of commands ')
             .addFields(
                 {name : '!help', value: "To view the list of commands " ,inline:false},
                 {name : '!website', value: "Visit our Website" ,inline:false},
                 {name : '!facebook', value: "Follow us on Facebook " ,inline:false},
-                {name : '!twitter', value: "Follow us on Twitter " ,inline:false},
-                {name : '!github', value: "Visit our Github repo " ,inline:false},
+                {name : '!twitter', value: "Check us out on Twitter " ,inline:false},
+                {name : '!github', value: "Visit our Github Repository " ,inline:false},
                 {name : '!telegram', value: "Join our telegram channel " ,inline:false},
                 {name : '!xkcd', value: "To get a Comic " ,inline:false},
+                {name : '!irc', value: "Find us on IRC :) " ,inline:false},
+                {name : '!blog', value: "Get the link of OSDC blog" ,inline:false},
                 {name : '!instagram', value: "Follow us on instagram :) " ,inline:false},
 
             )
@@ -82,7 +84,7 @@ bot.on('message',message => {
    }
    if(message.content === '!twitter')
    {
-        const twitter =  new Discord.MessageEmbed().setTitle('Follow us on Twitter').setURL('https://twitter.com/osdcjiit')
+        const twitter =  new Discord.MessageEmbed().setTitle('Check us out on Twitter').setURL('https://twitter.com/osdcjiit')
         message.channel.send(twitter)
    }
    if(message.content === '!facebook')
@@ -92,7 +94,7 @@ bot.on('message',message => {
    }
     if(message.content === '!github')
     {
-        const github = new Discord.MessageEmbed().setTitle('Visit you Github Repo ').setURL('https://github.com/osdc')
+        const github = new Discord.MessageEmbed().setTitle('Visit you Github Repository ').setURL('https://github.com/osdc')
         message.channel.send(github)
     }
     if(message.content === '!telegram')
@@ -100,6 +102,17 @@ bot.on('message',message => {
         const telegram = new Discord.MessageEmbed().setTitle(' Join our Telegram Channel').setURL('https://t.me/jiitosdc')
         message.channel.send(telegram)
     } 
+    if(message.content === '!irc')
+    {
+        const irc = new Discord.MessageEmbed().setTitle(' Join us on IRC server of Freenode at #jiit-lug').setURL('https://github.com/osdc/community-committee/wiki/IRC')
+        message.channel.send(irc)
+    } 
+    if(message.content === '!blog')
+    {
+        const blog = new Discord.MessageEmbed().setTitle('Blogs written by the folks at the Open Source Developers Club').setURL('https://osdcblog.netlify.com/')
+        message.channel.send(blog)
+    } 
+    
     if(message.content === '!instagram')
     {
         message.channel.send('https://tenor.com/view/dont-do-that-avengers-black-panther-we-dont-do-that-here-gif-12042935')

@@ -1,8 +1,9 @@
 # Discord Bot 
+A chat bot for Discord, built on top of discord.js.
 
 ## Installation
 
-This bot runs on [node.js](https://nodejs.org/en/). You will need at least node 12
+This bot runs on [node.js](https://nodejs.org/en/). You will need at least node 12.xx
 
 ## GET THE DISCORD-API TOKEN
 
@@ -12,7 +13,7 @@ This bot runs on [node.js](https://nodejs.org/en/). You will need at least node 
 4. You’ll get your Bot API token under the token title
 5. Copy it and save it in a file named as /.env/ in your project folder.
 
-## ADD BOT TO YOU TEST SERVER
+## ADD BOT TO YOUR TEST SERVER
 
 1. Go to OAuth2 section in your application
 2. Select bot in the scopes menu and Administrator in bot permission menu.
