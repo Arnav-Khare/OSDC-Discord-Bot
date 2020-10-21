@@ -29,7 +29,3 @@ This bot runs on [node.js](https://nodejs.org/en/). You will need at least node 
 npm install
 node bot.js
 ```
-
-## GIF
-
-![Demo](OSDC-BOT/Working.gif)
